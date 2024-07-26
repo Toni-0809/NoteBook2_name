@@ -12,6 +12,10 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using CinemaHelper.Core.Data;
+using CinemaHelper.Core.Service;
+using System.Windows;
+
 
 
 namespace NoteBook2_name
@@ -21,9 +25,13 @@ namespace NoteBook2_name
     /// </summary>
     public partial class MainWindow : Page
     {
+         private MainViewModel viewModel = new MainViewModel(new NoteService2(new NoteDataSource2()));
         public MainWindow()
         {
+            DataContext = viewModel;
             InitializeComponent();
         }
     }
 }
+
+
