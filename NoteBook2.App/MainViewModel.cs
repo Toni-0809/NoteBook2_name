@@ -8,7 +8,8 @@ using System.Collections.ObjectModel;
 
 namespace NoteBook2.App
 {
-    public class MainViewModel : ObservableObject
+
+ public class MainViewModel : ObservableObject
     {
 
         private string _input = string.Empty;
@@ -23,7 +24,7 @@ namespace NoteBook2.App
         }
 
         private ObservableCollection<Note> _NoteList2 = new ObservableCollection<Note>();
-        public ObservableCollection<Note> NoteList2 { get => _NoteList2; set { _NoteList2 = value; OnPropertyChanged("NoteList2"); } }
+        public ObservableCollection<Cinema> NoteList2 { get => _NoteList2; set { _NoteList2 = value; OnPropertyChanged("NoteList2"); } }
 
         private NoteService2 NoteService2;
 
@@ -33,7 +34,7 @@ namespace NoteBook2.App
             get => _selectedNote;
             set
             {
-                _selectedNote = value;
+                __selectedNote = value;
                 OnPropertyChanged("SelectedNote");
             }
         }
