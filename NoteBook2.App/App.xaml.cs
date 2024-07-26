@@ -1,8 +1,5 @@
-﻿using System;
-using System.Configuration;
-using System.Data;
+
 using System.Windows;
-using Windows.UI.Xaml;
 
 namespace NoteBook2.App
 {
